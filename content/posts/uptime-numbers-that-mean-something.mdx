@@ -1,0 +1,36 @@
+---
+title: "Uptime numbers that actually mean something"
+description: "99.9% sounds precise and hides almost everything. How to report availability so customers can plan around it."
+date: "2026-09-29"
+tag: "Reliability"
+---
+
+"We had 99.95% uptime last quarter" is a fine sentence for a slide. It is a poor one for a customer who lost their evening to the other 0.05%.
+
+## What the nines really allow
+
+Allowed downtime is easy to compute and surprisingly small over a month.
+
+| Target | Per 30 days | Per year |
+| --- | --- | --- |
+| 99% | 7 h 12 min | 3 d 15 h |
+| 99.9% | 43 min | 8 h 45 min |
+| 99.99% | 4 min 19 s | 52 min |
+
+A single bad deploy can spend a whole quarter's budget at 99.99%. That is not a reason to avoid the target. It is a reason to know what you are promising.
+
+## Measure from the outside
+
+Health checks that run inside your own network will tell you the process is alive. They will not tell you that DNS is broken or that a certificate expired. Probe from several regions, over the public internet, against the same URL a customer uses.
+
+<Callout>
+Require two regions to agree before opening an incident. It cuts false alarms without adding more than a few seconds of delay.
+</Callout>
+
+## Report per component
+
+An overall percentage hides the part customers care about. Split the number by component, such as API, dashboard and billing, and let people follow only what they depend on. A partial outage in webhooks should not make the whole product look red, and it should not be invisible either.
+
+## Show the bad days
+
+Honest history builds more trust than a spotless chart. Keep 90 days of incidents public, with start, end and a one-line summary. Customers read gaps as concealment faster than they read downtime as failure.

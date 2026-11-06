@@ -1,0 +1,34 @@
+---
+title: "A blameless post-incident review that gets read"
+description: "Most reviews are written once and never opened again. A one-page structure that people finish and act on."
+date: "2026-09-08"
+tag: "Process"
+---
+
+A post-incident review is useful only if someone changes something because of it. Long documents with a dozen charts tend to be filed and forgotten, so we aim for one page.
+
+## Start with the timeline
+
+Write what happened in order, with timestamps and no adjectives. Detection, first update, mitigation, resolution. The gap between the first and second entries is often the most useful finding in the whole document.
+
+## Ask "how did it make sense?"
+
+People rarely act carelessly. They act on the information they had, under pressure, with the tools in front of them. Replace "who missed the alert" with "why did the alert look ignorable at 3 a.m."
+
+- Which signal was missing or misleading?
+- Which step relied on one person's memory?
+- What would have shortened detection by half?
+
+<Callout>
+Name roles, not people. "The on-call engineer" teaches the reader as much as a name does, and nobody feels cornered.
+</Callout>
+
+## Keep the actions few
+
+Three actions with an owner and a date beat fifteen without. Rank them by how much they reduce the chance or the impact of a repeat, and drop the rest into the backlog honestly.
+
+## Publish a short version
+
+Customers do not need your internal debate. They need a plain summary: what broke, how long it lasted, what you are changing. Link it from the incident on your status page so the story lives in one place.
+
+> A good review reads like a map, not a verdict.

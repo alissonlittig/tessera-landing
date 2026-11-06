@@ -1,0 +1,39 @@
+---
+title: "Write the first incident update in ten minutes"
+description: "A short, boring first message beats a perfect one an hour later. Here is a template and the reasoning behind it."
+date: "2026-10-14"
+tag: "Incident communication"
+---
+
+Most teams know they should communicate during an outage. Fewer know what to say while they still do not know what is wrong. The result is silence, and silence is the loudest message of all.
+
+## The four-line first update
+
+The first update has one job: tell people you know, and tell them when they will hear from you again. Nothing more.
+
+1. **What is affected.** Name the feature the way a customer would, not the way your code does.
+2. **Who is affected.** "Some customers" is fine if you honestly do not know yet.
+3. **What you are doing.** "We are investigating" is a complete sentence.
+4. **When the next update lands.** A time, not "soon".
+
+<Callout>
+A fixed rhythm matters more than a good explanation. If you promise an update every 30 minutes, post one even when the only news is "no change".
+</Callout>
+
+## What to leave out
+
+Do not guess at causes. Do not apologise three times. Do not promise a fix time you cannot control. You can add all of that in the post-incident review, where you have the facts.
+
+```text
+Investigating: Webhook deliveries delayed
+Some webhook events are arriving several minutes late.
+We are investigating and will update by 14:30 UTC.
+```
+
+## Why ten minutes
+
+Support volume climbs the moment customers cannot tell whether the problem is you or them. A short message at minute ten removes that doubt, and every ticket you avoid is an engineer who keeps fixing instead of replying.
+
+> Say what you know, say what you do not, say when you will speak again.
+
+Keep that sentence next to your incident template and the first update almost writes itself.

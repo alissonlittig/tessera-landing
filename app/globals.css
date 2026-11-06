@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), Georgia, serif;
+  --color-paper: #f6f4ee;
+  --color-card: #fffdf8;
+  --color-ink: #11161c;
+  --color-muted: #4b5563;
+  --color-line: #e3dfd3;
+  --color-brand: #0b6b5c;
+  --color-brand-deep: #084c42;
+  --color-mint: #cfeadf;
+  --color-amber: #b45309;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 6px; }
+::selection { background: var(--color-mint); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+
+.grain { background-image: radial-gradient(circle at 1px 1px, rgb(17 22 28 / 0.07) 1px, transparent 0); background-size: 22px 22px; }
+@keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+.pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(45deg); }
