@@ -4,7 +4,7 @@ import Pricing from "@/components/Pricing";
 import { getPosts, fmtDate } from "@/lib/posts";
 
 const features = [
-  { t: "Checks every 30 seconds", d: "HTTP, TCP, DNS and heartbeat monitors from six regions, with a second opinion before anyone is paged.", n: "01" },
+  { t: "Checks every 30 seconds, or 10 on Scale", d: "HTTP, TCP, DNS and heartbeat monitors from six regions, with a second opinion before anyone is paged.", n: "01" },
   { t: "Incident timelines", d: "Post an update in two clicks. Templates keep the tone calm and the wording consistent across the team.", n: "02" },
   { t: "Subscribers, not noise", d: "Customers follow only the components they use, by email, Slack or webhook. No blanket blasts.", n: "03" },
   { t: "Your domain, your look", d: "Custom domain, logo and colors. The page loads from the edge in under 200 ms, even during an outage.", n: "04" },

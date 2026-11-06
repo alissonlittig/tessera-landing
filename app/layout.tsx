@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "./" },
   icons: { icon: asset("/icon.svg") },
-  openGraph: { type: "website", siteName: "Tessera", title, description, url: SITE_URL + "/", images: [{ url: asset("/og.png"), width: 1200, height: 630, alt: "Tessera status pages" }] },
-  twitter: { card: "summary_large_image", title, description, images: [asset("/og.png")] },
+  openGraph: { type: "website", siteName: "Tessera", title, description, url: SITE_URL + "/", images: [{ url: `${SITE_URL}/og.png`, width: 1200, height: 630, alt: "Tessera status pages" }] },
+  twitter: { card: "summary_large_image", title, description, images: [`${SITE_URL}/og.png`] },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f6f4ee" };
